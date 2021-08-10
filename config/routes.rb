@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   # New Task
   get '/articles/new', to: 'articles#new'
   post '/articles', to: 'articles#create'
-  # Details
-  get '/articles/:id', to: 'articles#show', as: :article
   # Edit
   get "/articles/:id/edit", to: 'articles#edit', as: :article_edit
   patch "/articles/:id", to: 'articles#update'
+  # Details
+  get '/articles/:id', to: 'articles#show', as: :article
   # Delete
   delete '/articles/:id', to: 'articles#destroy'
 
